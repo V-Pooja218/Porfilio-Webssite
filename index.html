@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pooja Vinayaga Selvan | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+    scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    background:#0f172a;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+nav h1{
+    color:white;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+#home{
+    height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 10%;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+}
+
+.hero-text{
+    max-width:50%;
+    animation:fadeIn 1.5s ease-in;
+}
+
+.hero-text h1{
+    font-size:42px;
+}
+
+.hero-text span{
+    color:#38bdf8;
+}
+
+.hero-text p{
+    margin:20px 0;
+    font-size:18px;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#38bdf8;
+    border:none;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+.hero-img{
+    animation:fadeIn 2s ease-in;
+}
+
+.hero-img img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,0.6);
+}
+
+/* SECTIONS */
+section{
+    padding:80px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:30px;
+}
+
+/* SKILLS */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    background:#38bdf8;
+    color:white;
+}
+
+/* PROJECTS */
+.project-card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:scale(1.02);
+}
+
+/* CONTACT */
+.contact-info{
+    text-align:center;
+    line-height:35px;
+    font-size:18px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#0f172a;
+    color:white;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    #home{
+        flex-direction:column;
+        text-align:center;
+    }
+    .hero-text{
+        max-width:100%;
+    }
+    .hero-img{
+        margin-top:30px;
+    }
+}
+.hero-img img{
+    width:380px;
+    height:380px;
+    object-fit:cover;
+    object-position: top center;   /* Important line */
+    border-radius:50%;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Pooja</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+    <div class="hero-text">
+        <h1>Hello, I'm <span>Pooja Vinayaga Selvan</span></h1>
+        <p>Java Developer | Web Developer | Software Engineer</p>
+        <button class="btn" onclick="document.getElementById('contact').scrollIntoView()">Hire Me</button>
+    </div>
+
+    <div class="hero-img">
+        <!-- Replace profile.jpg with your image name -->
+        <img src="Pooja Photo.jpg" alt="Pooja Photo">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am Pooja from Kanyakumari, currently pursuing my final year in Computer Science Engineering at VSB College of Engineering Technical Campus Coimbatore. I have a strong interest in full-stack development and continuously work on improving my technical skills.My technical expertise includes HTML, CSS, JavaScript, React, Java, MySQL, and Object-Oriented Programming concepts. I enjoy building responsive and user-friendly web applications while strengthening my backend development skills.My short-term goal is to become a skilled Full Stack Developer, and my long-term goal is to secure a position in a top MNC where I can grow professionally and contribute to solving real-world problems. During my third year, I developed projects such as a Smart Plant Health Monitoring System using IOT and an E-commerce Website using frontend technologies.
+    </p>
+
+   
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card">Java</div>
+        
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Bootstrap
+
+        </div>
+        <div class="skill-card">MySQL</div>
+        <div class="skill-card">Git</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+        <h3>Smart Plant Health Monitoring System</h3>
+        <p>This project assists farmers and plant lovers in monitoring the health of plants using a digital
+            system that measures temperature, humidity, light intensity, and soil moisture levels in real time.
+            This system allows for constant monitoring of the environment and notifications based on sensor
+            data.The system acquires data from sensors and displays it using a simple interface, allowing users
+            to make decisions regarding watering, lighting, and plant care.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Pooja’s Exclusive Store</h3>
+        <p>I developed an E-commerce website named Pooja’s Exclusive Store using HTML, CSS,
+            and JavaScript with a clean and responsive design. The site includes product categories,
+            shopping images, and add-to-cart functionality to give users a real shopping experience. It also
+            offers a user-friendly interface with well-structured pages such as Home, About, Profile,
+            Contact, and Cart, ensuring smooth navigation and easy interaction for users.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+        <p>Email: poojavinayagaselvan@gmail.com</p>
+        <p>Phone: +91 9344412849</p>
+        <p>LinkedIn: linkedin.com/in/pooja-vinayaga-selvan-a5b2262b8</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Pooja Vinayaga Selvan | Portfolio
+</footer>
+
+</body>
+</html>
